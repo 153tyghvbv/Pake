@@ -57,7 +57,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install node
         uses: actions/setup-node@v3
@@ -134,7 +134,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: output-${{ inputs.platform }}.zip
-          path: node_modules/pake-cli/*
+          path: node_modules/pake-cli/output*
           retention-days: 3
 
       - name: Rust cache store
